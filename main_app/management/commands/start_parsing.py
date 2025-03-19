@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         try:
-            command = ['dotnet', r"C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\Parsers\samokat_parser\Parser.dll", r'C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\data\samokat_data.json']
+            command = ['dotnet', r"C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\Parsers\samokat_parser\parser_samokat.dll", r'C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\data\samokat_data.json']
 
             result = subprocess.run(command, capture_output=True, text=True)
 
