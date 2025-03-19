@@ -7,7 +7,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         try:
-            command = ['dotnet', r"C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\Parsers\vkusvill_parser\vkusvil_parser.dll", r'C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\data\vkusvill_parser_data.json']
+            command = ['dotnet', r"C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\Parsers\samokat_parser\Parser.dll", r'C:\Users\Asus\PycharmProjects\PriceMatch\main_app\management\commands\data\samokat_data.json']
 
             result = subprocess.run(command, capture_output=True, text=True)
 
@@ -16,3 +16,6 @@ class Command(BaseCommand):
                 print(result.stderr)
         except Exception as e:
             print(f"Ошибка при выполнении: {e}")
+
+
+

@@ -1,2 +1,4 @@
 .idea
 /main_app/management/commands/data/vkusvill_parser_data.json
+/main_app/management/commands/data/samokat_data.json
+/main_app/management/commands/data/av_data.json

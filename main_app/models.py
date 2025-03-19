@@ -10,4 +10,4 @@ class Product(models.Model):
     price = models.FloatField()
     image = models.URLField()
     weight = models.CharField(max_length=20)
-    shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    shop = models.ForeignKey(Shop, on_delete=models.CASCADE,default=1)
