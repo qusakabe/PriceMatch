@@ -1,1 +1,2 @@
 .idea
+/main_app/management/commands/data/vkusvill_parser_data.json
