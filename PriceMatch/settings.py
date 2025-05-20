@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'PriceMatch.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "postgres",
+        'NAME': "PriceMatch",
         'USER': "root",
         'PASSWORD': 12345,
         'HOST': "localhost",
-        'PORT': 5438,
+        'PORT': 5432,
     }
 }
 
