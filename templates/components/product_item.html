@@ -1,0 +1,22 @@
+<div class="product_item">
+    <img src="{{ product.img_url }}" class="product_item__img" alt="img">
+    <div class="product_item__info">
+        <div class="product_item__name">{{ product.name }}</div>
+        <div class="product_item__measure">{{ product.measure }}</div>
+        <div class="product_item__bottom">
+            <div class="product_item__count">
+                <div class="count__control product_item__count_minus">-</div>
+                <div class="">{{ product.count }}</div>
+                <div class="count__control product_item__count_minus">+</div>
+            </div>
+            <div class="product_item__price-container">
+                {% if product.new_price %}
+                    <div class="product_item__price product_item__price_old">{{ product.price }}₽</div>
+                    <div class="product_item__price product_item__price_new">{{ product.new_price }}₽</div>
+                {% else %}
+                    <div class="product_item__price">{{ product.price }}₽</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

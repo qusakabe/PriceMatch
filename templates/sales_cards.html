@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Агрогномики{% endblock %}
+
+{% block content %}
+    <div class="container_feed">
+        {% include "components/cart.html" %}
+        <section class="settings">
+            <div class="section__title">Настройки профиля</div>
+
+            <nav class="settings__tabs">
+                <button class="settings__tab active" data-target="personal">Личные данные</button>
+                <button class="settings__tab" data-target="loyalty">Карты лояльности</button>
+                <button class="settings__tab" data-target="security">Безопасность</button>
+                <button class="settings__tab" data-target="delete">Удаление аккаунта</button>
+            </nav>
+        
+            <div class="settings__content">
+                <div class="settings__section" id="loyalty" style="display: none;">
+                    <div class="loyalty-cards">
+                        <div class="card">Карта “Перекресток”</div>
+                        <div class="card">Карта “Азбука вкуса”</div>
+                        <div class="card">Карта “ВкусВилл”</div>
+                        <div class="card">Карта “Пятёрочка” (нет фото)</div>
+                    </div>
+                </div>
+        
+                <div class="settings__section" id="security" style="display: none;">
+
+                </div>
+        
+                <div class="settings__section" id="delete" style="display: none;">
+
+                </div>
+            </div>
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const tabs = document.querySelectorAll('.settings__tab');
+                    const sections = document.querySelectorAll('.settings__section');
+        
+                    tabs.forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            tabs.forEach(t => t.classList.remove('active'));
+                            tab.classList.add('active');
+        
+                            sections.forEach(section => {
+                                section.style.display = section.id === tab.dataset.target ? 'block' : 'none';
+                            });
+                        });
+                    });
+                });
+            </script>
+        </section>
+    </div>
+{% endblock %}

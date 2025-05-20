@@ -1,0 +1,13 @@
+:root {
+	--gray: #f2f2f2;
+	--white: #fff;
+	--black: #000;
+	--gray-d: #797979;
+	--sky: #c3e4ff;
+	--sky-l: #dff0fd;
+	--sky-d: #7da3c2;
+	--red: #cb696a;
+	--green: #51a369;
+
+	--trans: all 0.15s ease-out;;
+}

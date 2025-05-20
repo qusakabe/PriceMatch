@@ -1,0 +1,29 @@
+{% load static %}
+
+<aside class="cart">
+    <h2 class="cart__title">Корзины</h2>
+    {% for section in cart %}
+        <section class="cart__store">
+            <div class="cart__store-header">
+                <img src="{{ section.store.logo }}" class="store_cart__img" alt="logo">
+                <div class="store_cart__name">{{ section.store.name }}</div>
+            </div>
+            {% for product in section.products %}
+                {% include 'components/product_item.html' %}
+            {% endfor %}
+
+            {% for product in section.products %}
+                {% include 'components/product_item.html' %}
+            {% endfor %}
+            <div class="cart__store-footer">
+                <div class="cart__total-price">{{ section.total_price }}₽</div>
+                <div class="cart__delivery-time">Доставка {{ section.delivery_time }} минут</div>
+            </div>
+        </section>
+    {% endfor %}
+
+    <!-- <div class="cart__empty">
+        <img class="cart__image" src="{% static 'img/package.svg' %}" alt="Корзина пуста">
+        <p class="cart__text">Ни одна корзина не собрана</p>
+    </div> -->
+</aside>

@@ -1,0 +1,13 @@
+<div class="modal hidden" id="modal_profile">
+    <div class="modal__window_profile">
+        <div class="modal_profile__title">{{ request.user.first_name }}</div>
+
+        <div class="modal_profile__navs">
+            <a class="modal_profile__nav" href="{% url 'sales_cards' %}">Настройки профиля</a>
+            <a class="modal_profile__nav">Любимые товары</a>
+            <a class="modal_profile__nav">Поддержка</a>
+        </div>
+        <!-- <div class="modal__title">{{ request.user.profile.phone }}</div> -->
+        <a class="modal__btn" href="{% url 'logout' %}">Выход</a>
+    </div>
+</div>

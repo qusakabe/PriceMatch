@@ -1,0 +1,81 @@
+.form_auth {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    background: var(--white);
+    padding: 20px 24px;
+    border-radius: 16px;
+    gap: 24px;
+}
+
+.form_auth__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.form_auth__toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px
+}
+
+.form_auth__title {
+    font-size: 16px;
+    font-weight: 500;
+    align-self: center;
+    margin: 0;
+    transition: var(--trans);
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 0 16px;
+    height: 32px;
+    background: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.form_auth__title:hover {
+    background: var(--sky-l);
+}
+
+.form_auth__title:active {
+    background: var(--sky);
+}
+
+.form_auth__title.active {
+    background: var(--sky-l);
+}
+
+.form_auth__btn {
+    background-color: var(--sky-l);
+    color: var(--black);
+    font-weight: 500;
+    border: none;
+    padding: 0 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--trans);
+    gap: 4px;
+    transition: var(--trans);
+}
+
+.form_auth__btn:hover {
+    background-color: var(--sky);
+}
+
+.form_auth__btn:active {
+    background-color: var(--sky-l);
+}

@@ -1,0 +1,47 @@
+{% load static %}
+
+<div class="modal hidden" id="modal_product">
+    <div class="modal__window">
+        <div class="product_modal">
+            <img src="{{ modal_product.image }}" class="product_modal__img" alt="img">
+            <div class="product_modal__info">
+                <div class="product_modal__header">
+                    <div class="product_modal__name">{{ modal_product.name }}</div>
+                    <div class="product_item__measure">{{ modal_product.measure }}</div>
+                    <div class="product_modal__price-container">
+                        <img src="{% static 'img/icons/sale-icon.svg' %}" class="product_modal__sale" alt="">
+                        <div class="product_modal__price product_modal__price_new">{{ modal_product.last_price }}₽</div>
+                        <div class="product_modal__price product_modal__price_old">{{ modal_product.price }}₽</div>
+                    </div>
+                </div>
+
+                <div class="product_modal__actions">
+                    <button class="modal__btn" data-id="{{ modal_product.id }}" onclick="addToCart(this)">В корзину</button>
+                    <a href="{{ modal_product.store_url }}" class="a_link">Перейти в магазин</a>
+                </div>
+
+                <div class="modal__options">
+                    <div class="option">
+                        <button class="option__btn">
+                            <img class="option__icon" src="{% static 'img/icons/like-icon.svg' %}">
+                        </button>
+                        <div class="option__text">Сделать<br>любимым</div>
+                    </div>
+    
+                    <div class="option">
+                        <button class="option__btn">
+                            <img class="option__icon" src="{% static 'img/icons/list-icon.svg' %}">
+                        </button>
+                        <div class="option__text">Добавить<br>в список</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="similar-products">
+            <div class="product_modal__name">Похожие товары от {{ modal_product.store.name }}</div>
+        </div> -->
+
+        <img src="{% static 'img/flowers_modal.svg' %}" class="modal__bg" alt="">
+    </div>
+</div>

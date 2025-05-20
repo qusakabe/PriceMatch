@@ -1,0 +1,15 @@
+<div class="store">
+    <div class="store__header">
+        <img class="store__logo" src="{{ store.logo }}" alt="{{ store.name }}">
+        <div class="store__header-right">
+            <span class="store__title">{{ store.name }}</span>
+            <div class="store__info">
+                <div class="cart__delivery-time">Доставка {{ store.delivery_time }} минут</div>
+                <span class="store__delivery store__delivery_free">Бесплатная доставка</span>
+            </div>
+        </div>
+    </div>
+    <div class="product-list">
+        {% include "components/product_card.html" %}
+    </div>
+</div>

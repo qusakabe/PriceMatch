@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Агрогномики{% endblock %}
+
+{% block content %}
+    {% include "components/product_modal/product_modal.html" %}
+
+    <div class="container_feed">
+        {% include "components/cart.html" %}
+
+        <section class="feed">
+            <div class="auth-promo">
+                <p class="auth-promo__text">Авторизируйтесь, чтобы получить все скидки</p>
+                <a class="auth-promo__button" href="{% url 'login' %}">Авторизоваться</a>
+            </div>
+
+            {% for store in stores %}
+                {% include "components/store.html" %}
+            {% endfor %}
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Агрогномики{% endblock %}
+
+{% block content %}
+    <div class="container_auth">
+        {% include "components/login_form.html" %}
+        <img src="{% static 'img/gnome.svg' %}" class="auth__bg-img" alt="">
+    </div>
+{% endblock %}
