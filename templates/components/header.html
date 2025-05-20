@@ -1,0 +1,12 @@
+{% load static %}
+
+<header class="header">
+    <img class="header__logo" src="{% static 'img/logo.svg' %}">
+    <div class="input__inner">
+        <img src="{% static 'img/icons/search-icon.svg' %}" class="header__search-icon" alt="search">
+        <input class="header__search" type="text" placeholder="Соус Терияки">
+    </div>
+    <div class="header__controls">
+    <a class="header__login-button" href="{% url 'login' %}">Войти</a>
+    </div>
+</header>
