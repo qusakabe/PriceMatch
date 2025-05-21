@@ -15,7 +15,7 @@ class Command(BaseCommand):
         if not os.path.exists(json_file_path):
             self.stdout.write(self.style.ERROR("Файл products.json не найден"))
             return
-        shop = Shop.objects.get(id=2)
+        shop = Shop.objects.get(id=4)
 
 
         try:
