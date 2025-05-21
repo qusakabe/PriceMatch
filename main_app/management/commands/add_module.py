@@ -7,4 +7,4 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         try:
           with connection.cursor() as cursor:
-          cursor.execute("CREATE EXTENSION IF NOT EXISTS pg_trgm;")
+              cursor.execute("CREATE EXTENSION IF NOT EXISTS pg_trgm;")
