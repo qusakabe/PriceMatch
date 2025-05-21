@@ -10,7 +10,6 @@ class ProductManager(models.Manager):
     def get_sales_by_id(self, shop_id):
         return self.filter(
             shop_id=shop_id,
-            last_price__isnull=False
         )
 
     def fuzzy_search_grouped_by_shop(self, query, threshold=0.2):
