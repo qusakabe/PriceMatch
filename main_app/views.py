@@ -62,19 +62,19 @@ def index(request):
                     'name': 'Вкусвилл',
                     'logo': 'https://avatars.mds.yandex.net/i?id=6096edcf21e822536400b8bbf3b7279580e0d45e-11386386-images-thumbs&n=13',
                     'delivery_time': '15-30',
-                    'products': Product.objects.all()[:10]
+                    'products': Product.objects.get_sales_by_id(1)
                 },
                 {
                     'name': 'Перекресток',
                     'logo': 'https://avatars.mds.yandex.net/i?id=2642bb99605d0428fbf7533881b03e946e1b8b80-5189723-images-thumbs&n=13',
                     'delivery_time': '15-30',
-                    'products': Product.objects.all()[:10]
+                    'products': Product.objects.get_sales_by_id(4)
                 },
                 {
                     'name': 'Азбука вкуса',
                     'logo': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TiXjDBJvN80GfDR9QhHo4TRqadtw-mV3zQ&s',
                     'delivery_time': '15-30',
-                    'products': Product.objects.all()[:10]
+                    'products': Product.objects.get_sales_by_id(3)
                 },
             ],
             'cart': get_cart_context(request.user) if request.user.is_authenticated else [],
