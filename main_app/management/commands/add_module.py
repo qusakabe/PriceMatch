@@ -5,6 +5,5 @@ class Command(BaseCommand):
     help = 'Starts the process'
 
     def handle(self, *args, **kwargs):
-        try:
           with connection.cursor() as cursor:
               cursor.execute("CREATE EXTENSION IF NOT EXISTS pg_trgm;")
